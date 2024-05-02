@@ -9,22 +9,22 @@ class RaceViewSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: CustomSearchTextField(),
           ),
           // filter Section ==================>>>>>>
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: FilterRowSection(),
           ),
 
           // Race Section ==================>>>>>>
 
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 16, right: 8, left: 8),
             child: RacesList(),
           ),

@@ -14,7 +14,7 @@ class RaceItem extends StatelessWidget {
     return Stack(children: [
       Container(
         padding: const EdgeInsets.only(bottom: 8),
-        height: MediaQuery.of(context).size.height * .27,
+        height: 180,
         width: double.infinity,
         child: Card(
           elevation: 5,
@@ -160,10 +160,8 @@ class RaceItem extends StatelessWidget {
   }
 
   String formatDate(String dateString) {
-    // Parse the input string into a DateTime object
     DateTime dateTime = DateTime.parse(dateString);
 
-    // Format the DateTime object into the desired format
     String formattedDate = DateFormat('dd MMM, yyyy').format(dateTime);
 
     return formattedDate;

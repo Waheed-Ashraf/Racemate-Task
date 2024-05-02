@@ -56,7 +56,8 @@ class _ExpolreBodyState extends State<ExpolreBody> {
             indicatorColor: ColorPallet.secondaryColor,
             indicatorSize: TabBarIndicatorSize.tab,
             dividerColor: ColorPallet.secondBlueColor,
-            labelStyle: AppStyles.styleTitleBold16,
+            labelStyle:
+                AppStyles.styleSubTitle14.copyWith(fontWeight: FontWeight.w900),
             labelPadding: EdgeInsets.zero,
             unselectedLabelColor: ColorPallet.secondWhiteColor,
             labelColor: ColorPallet.whiteColor,
