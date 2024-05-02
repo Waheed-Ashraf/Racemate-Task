@@ -58,7 +58,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             unselectedLabelStyle: TextStyle(
               color: ColorPallet.secondBlueColor,
             ),
-            iconSize: 28,
+            iconSize: 20,
             selectedItemColor: ColorPallet.primaryColor,
             unselectedItemColor: ColorPallet.secondBlueColor,
             items: [
@@ -66,13 +66,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 icon: Icon(
                   FontAwesomeIcons.house,
                 ),
-                label: "Home",
+                label: " Home",
               ),
               const BottomNavigationBarItem(
                 icon: Icon(
                   FontAwesomeIcons.dumbbell,
                 ),
-                label: "Train",
+                label: " Train",
               ),
               BottomNavigationBarItem(
                 icon: CircleAvatar(
@@ -90,7 +90,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               ),
               const BottomNavigationBarItem(
                 icon: Icon(
-                  FontAwesomeIcons.person,
+                  FontAwesomeIcons.user,
                 ),
                 label: "Me",
               ),
