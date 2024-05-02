@@ -4,4 +4,5 @@ abstract class ExploreRepo {
   Future<List<RaceModel>> getAllRaces();
   List<RaceModel> searchByRaceNameOrCountry(
       {required String raceNameOrCountary});
+  //List<RaceModel> getRacesByFilters({List<String>? filters});
 }

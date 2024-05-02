@@ -14,7 +14,7 @@ class RaceItem extends StatelessWidget {
     return Stack(children: [
       Container(
         padding: const EdgeInsets.only(bottom: 8),
-        height: MediaQuery.of(context).size.height * .28,
+        height: MediaQuery.of(context).size.height * .27,
         width: double.infinity,
         child: Card(
           elevation: 5,
@@ -52,10 +52,12 @@ class RaceItem extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       const SizedBox(
-                        height: 4,
+                        height: 1,
                       ),
                       if (raceModel.organizer == null)
-                        const SizedBox()
+                        const SizedBox(
+                          height: 20,
+                        )
                       else
                         Text(
                           "Organized By \n${raceModel.organizer} ",
@@ -63,7 +65,7 @@ class RaceItem extends StatelessWidget {
                               .copyWith(color: ColorPallet.secondBlueColor),
                         ),
                       const SizedBox(
-                        height: 4,
+                        height: 1,
                       ),
                       Row(
                         children: [

@@ -24,3 +24,11 @@ final class ExploreRacesSearchedList extends ExploreState {
 }
 
 final class ExploreRacesSearchedListEmpty extends ExploreState {}
+
+// final class FilteredRacesList extends ExploreState {
+//   final List<RaceModel> filterdRaces;
+
+//   const FilteredRacesList({required this.filterdRaces});
+// }
+
+// final class FilteredRacesListEmpty extends ExploreState {}

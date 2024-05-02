@@ -39,6 +39,18 @@ class ExploreRepoImp implements ExploreRepo {
     }
     return searchedRaces;
   }
+
+  // @override
+  // List<RaceModel> getRacesByFilters({List<String>? filters}) {
+  //   List<RaceModel> filteredRacesType = [];
+  //   for (var index in filters!) {
+  //     filteredRacesType = racesData.where((element) {
+  //       var raceType = element.type.toLowerCase();
+  //       return raceType.contains(index);
+  //     }).toList();
+  //   }
+  //   return filteredRacesType;
+  // }
 }
 
 List<RaceModel> racesData = [];

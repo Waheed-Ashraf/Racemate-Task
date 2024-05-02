@@ -24,4 +24,15 @@ class ExploreCubit extends Cubit<ExploreState> {
       emit(ExploreRacesSearchedList(searchedRacesData: searchedRaces));
     }
   }
+
+  // fitchAllFilterdRaces({List<String>? filters}) {
+  //   emit(ExploreRacesLoading());
+  //   List<RaceModel> filterdRaces =
+  //       _exploreRepo.getRacesByFilters(filters: filters);
+  //   if (filterdRaces.isEmpty) {
+  //     emit(FilteredRacesListEmpty());
+  //   } else {
+  //     emit(FilteredRacesList(filterdRaces: filterdRaces));
+  //   }
+  // }
 }
