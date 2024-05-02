@@ -20,23 +20,28 @@ class _FilterRowState extends State<FilterRow> {
       padding: const EdgeInsets.symmetric(
         horizontal: 24,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
         children: [
-          Text(
-            widget.filterName,
-            style: AppStyles.styleTitleSemiBold16
-                .copyWith(color: ColorPallet.secondaryColor),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                widget.filterName,
+                style: AppStyles.styleTitleBold16
+                    .copyWith(fontWeight: FontWeight.w600),
+              ),
+              Checkbox(
+                  activeColor: ColorPallet.secondBlueColor,
+                  value: isChecked,
+                  onChanged: (newBool) {
+                    widget.onChanged;
+                    setState(() {
+                      isChecked = newBool;
+                    });
+                  }),
+            ],
           ),
-          Checkbox(
-              activeColor: ColorPallet.secondBlueColor,
-              value: isChecked,
-              onChanged: (newBool) {
-                widget.onChanged;
-                setState(() {
-                  isChecked = newBool;
-                });
-              })
+          Divider()
         ],
       ),
     );
