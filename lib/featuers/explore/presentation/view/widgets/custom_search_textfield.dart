@@ -5,16 +5,33 @@ import 'package:optomatica_flutter_task/core/utils/app_styles.dart';
 import 'package:optomatica_flutter_task/core/utils/colors_pallet.dart';
 import 'package:optomatica_flutter_task/featuers/explore/presentation/manager/explore_cubit/explore_cubit.dart';
 
-class CustomSearchTextField extends StatelessWidget {
-  CustomSearchTextField({
+class CustomSearchTextField extends StatefulWidget {
+  const CustomSearchTextField({
     super.key,
   });
-  final myController = TextEditingController();
+
+  @override
+  State<CustomSearchTextField> createState() => _CustomSearchTextFieldState();
+}
+
+class _CustomSearchTextFieldState extends State<CustomSearchTextField> {
+  late final TextEditingController _myController;
+  @override
+  void initState() {
+    _myController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _myController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: myController,
+      controller: _myController,
       onSubmitted: (value) {
         if (value == "") {
           BlocProvider.of<ExploreCubit>(context).fitchAllExploreRaces();
@@ -23,6 +40,7 @@ class CustomSearchTextField extends StatelessWidget {
               .fitchAllSearchedRaces(raceNameOrCountry: value);
         }
       },
+      style: TextStyle(height: 1.0, color: ColorPallet.primaryColor),
       decoration: InputDecoration(
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
@@ -32,11 +50,11 @@ class CustomSearchTextField extends StatelessWidget {
           padding: const EdgeInsets.only(right: 8),
           child: IconButton(
             onPressed: () {
-              if (myController.text == "") {
+              if (_myController.text == "") {
                 BlocProvider.of<ExploreCubit>(context).fitchAllExploreRaces();
               } else {
                 BlocProvider.of<ExploreCubit>(context).fitchAllSearchedRaces(
-                    raceNameOrCountry: myController.text);
+                    raceNameOrCountry: _myController.text);
               }
             },
             icon: Opacity(

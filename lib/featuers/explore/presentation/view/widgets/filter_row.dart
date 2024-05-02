@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:optomatica_flutter_task/core/utils/app_styles.dart';
 import 'package:optomatica_flutter_task/core/utils/colors_pallet.dart';
-import 'package:optomatica_flutter_task/core/widgets/custom_button.dart';
+import 'package:optomatica_flutter_task/featuers/explore/presentation/view/widgets/date_filter_bottom_sheet.dart';
 import 'package:optomatica_flutter_task/featuers/explore/presentation/view/widgets/distance_filter_bottom_sheet.dart';
-import 'package:optomatica_flutter_task/featuers/explore/presentation/view/widgets/filter_bottom_sheet_row.dart';
 import 'package:optomatica_flutter_task/featuers/explore/presentation/view/widgets/filter_item.dart';
 import 'package:optomatica_flutter_task/featuers/explore/presentation/view/widgets/location_filter_bottom_sheet.dart';
 import 'package:optomatica_flutter_task/featuers/explore/presentation/view/widgets/type_filter_bottom_sheet.dart';
@@ -56,6 +53,8 @@ class FilterRowSection extends StatelessWidget {
           const SizedBox(
             width: 8,
           ),
+
+          // Distance Filter ==================>>>>>>>>>>>
           FilterItem(
             onTap: () {
               showModalBottomSheet(
@@ -72,8 +71,18 @@ class FilterRowSection extends StatelessWidget {
           const SizedBox(
             width: 8,
           ),
+
+          // Date Filter ============>>>>>>>>>>>>>
           FilterItem(
-            onTap: () {},
+            onTap: () {
+              showModalBottomSheet(
+                  isScrollControlled: true,
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const FractionallySizedBox(
+                        heightFactor: .5, child: DateFilterBottomSheet());
+                  });
+            },
             backgroundColor: ColorPallet.whiteColor,
             filtarName: "Date",
           ),

@@ -64,15 +64,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
             items: [
               const BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.home,
+                  FontAwesomeIcons.house,
                 ),
                 label: "Home",
               ),
               const BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.group,
+                  FontAwesomeIcons.dumbbell,
                 ),
-                label: "Friends",
+                label: "Train",
               ),
               BottomNavigationBarItem(
                 icon: CircleAvatar(
@@ -84,15 +84,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
               ),
               const BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.message_outlined,
+                  FontAwesomeIcons.magnifyingGlass,
                 ),
-                label: "Inbox",
+                label: "Explore",
               ),
               const BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.person_outline,
+                  FontAwesomeIcons.person,
                 ),
-                label: "Profile",
+                label: "Me",
               ),
             ],
           ),
